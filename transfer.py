@@ -1,9 +1,11 @@
+#!/usr/bin/env python
+import sys
 from hypothesis import HypothesisUtils, HypothesisAnnotation
 
-source_usernames = ['USER1', 'USER2']
-urls = ['URL1', 'URL2']
-target_username = 'TARGET_USERNAME'
-target_token = 'TARGET_USERNAME_TOKEN'
+source_usernames = open('usernames.txt').read().split('\n')
+urls = open('urls.txt').read().split('\n')
+target_username = ''
+target_token = ''
 
 h = HypothesisUtils(target_username, target_token)  
 
